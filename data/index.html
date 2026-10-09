@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>高速道路の網のデータ | TAXI PRO NAVI</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+         max-width: 720px; margin: 0 auto; padding: 24px 20px 60px; line-height: 1.9; color: #222; background: #fafafa; }
+  @media (prefers-color-scheme: dark) { body { color: #eee; background: #111; } }
+  h1 { font-size: 1.4em; }
+  a { color: #1a7fbf; }
+  code { font-size: 0.95em; }
+  footer { margin-top: 48px; font-size: 0.85em; opacity: 0.7; }
+</style>
+</head>
+<body>
+<h1>高速道路の網のデータ（TAXI PRO NAVI）</h1>
+<p>TAXI PRO NAVI は、高速道路の入口・出口と高速の上の道を案内するために、OpenStreetMap のデータから作った「高速道路の網」をアプリに同梱しています。</p>
+<p>この網は <strong>© OpenStreetMap contributors</strong> のデータから作った派生データベースで、<a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database License（ODbL 1.0）</a> のもとで提供します。</p>
+<ul>
+  <li><a href="./ShutokoNet.json">ShutokoNet.json</a>（v2.0 に同梱した網・約 10MB）</li>
+  <li>元データ：OpenStreetMap（Geofabrik の日本の抽出）／作り方：<code>osmium-tool</code> で高速道路を取り出し、出入口・ジャンクションを数え、網の形に組み直しています。</li>
+  <li>OpenStreetMap のデータについて：<a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a></li>
+</ul>
+<p>網は、アプリの新しい版を出すたびに作り直します。</p>
+<p><a href="../index.html">サポートページへ戻る</a></p>
+<footer>© 2026 Hiroki Okazawa ／ 地図データ © OpenStreetMap contributors（ODbL）</footer>
+</body>
+</html>
