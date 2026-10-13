@@ -3,20 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>高速道路の網のデータ | TAXI PRO NAVI</title>
+<title>地図のデータ | TAXI PRO NAVI</title>
 <style>
   :root { color-scheme: light dark; }
   body { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
          max-width: 720px; margin: 0 auto; padding: 24px 20px 60px; line-height: 1.9; color: #222; background: #fafafa; }
   @media (prefers-color-scheme: dark) { body { color: #eee; background: #111; } }
   h1 { font-size: 1.4em; }
+  h2 { font-size: 1.1em; margin-top: 2em; }
   a { color: #1a7fbf; }
   code { font-size: 0.95em; }
   footer { margin-top: 48px; font-size: 0.85em; opacity: 0.7; }
 </style>
 </head>
 <body>
-<h1>高速道路の網のデータ（TAXI PRO NAVI）</h1>
+<h1>地図のデータ（TAXI PRO NAVI）</h1>
+<h2>高速道路の網</h2>
 <p>TAXI PRO NAVI は、高速道路の入口・出口と高速の上の道を案内するために、OpenStreetMap のデータから作った「高速道路の網」をアプリに同梱しています。</p>
 <p>この網は <strong>© OpenStreetMap contributors</strong> のデータから作った派生データベースで、<a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database License（ODbL 1.0）</a> のもとで提供します。</p>
 <ul>
@@ -25,6 +27,15 @@
   <li>OpenStreetMap のデータについて：<a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a></li>
 </ul>
 <p>網は、アプリの新しい版を出すたびに作り直します。</p>
+<h2>通りの名前（都道府県ごと）</h2>
+<p>案内の声・文字と地図の札で、「国道25号」ではなく「御堂筋」のように通りの名前を使うための台帳です。1都3県（東京・神奈川・埼玉・千葉）の分はアプリに同梱し、ほかの道府県の分は、アプリの設定「通りの名前」→［地域を選ぶ］から（または、その道府県に初めて入った時のお知らせから）受け取れます。</p>
+<p>この台帳も <strong>© OpenStreetMap contributors</strong> のデータから作った派生データベースで、<a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL 1.0</a> のもとで提供します。</p>
+<ul>
+  <li><a href="./streets/manifest.json">streets/manifest.json</a>（目録：47 都道府県の台帳の名前・大きさ・sha256）</li>
+  <li>台帳：<code>streets/&lt;都道府県コード&gt;-&lt;版&gt;.json</code>（例：<a href="./streets/27-2026-10-12.json">27-2026-10-12.json</a>＝大阪府）</li>
+  <li>作り方：OpenStreetMap の幹線道路（trunk・primary・secondary・tertiary）から、番号と名前を両方持つ道を取り出し、都道府県の境で切っています。</li>
+</ul>
+<p>呼び名が現場と違う道があれば、サポートページの連絡先までお知らせください。</p>
 <p><a href="../index.html">サポートページへ戻る</a></p>
 <footer>© 2026 Hiroki Okazawa ／ 地図データ © OpenStreetMap contributors（ODbL）</footer>
 </body>
